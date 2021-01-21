@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Quicksand", sans-serif; */
+  font-family: "Poppins", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+}
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://source.unsplash.com/1600x900/?nature,water");
+}
+.card {
+  padding-top: 20px;
+  border-radius: 30px;
+  color: #fff;
+  height: 600px;
+  width: 500px;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.search {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.search-bar {
+  background-color: #7c7c7c2b;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  color: #fff;
+  padding: 0 15px;
+  overflow: hidden;
+  font-size: 20px;
+  height: 40px;
+  width: 350px;
+  margin-bottom: 20px;
+}
+button {
+  background-color: #7c7c7c2b;
+  border: none;
+  outline: none;
+  color: #fff;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+button:hover {
+  background-color: #49e0d486;
+  cursor: pointer;
+}
+.weather {
+  margin-left: 20px;
+}
+h2.city {
+  margin-bottom: 40px;
+}
+.description {
+  margin-right: 30px;
+}
+#icon {
+  height: 30px;
+  width: 30px;
+}
+.descricon {
+  margin-bottom: 40px;
+  display: flex;
+  width: 400px;
+}
+.humidity {
+  margin-bottom: 40px;
+}
+.temp {
+  margin-bottom: 40px;
+}
+img {
+  margin-bottom: 20px;
+}
+.weather.loading {
+  visibility: hidden;
+  position: relative;
+}
+.weather.loading::after {
+  content: "Loading...";
+  visibility: visible;
+  color: #fff;
+  position: absolute;
+  bottom: 395px;
+  left: 40px;
+  font-size: 16px;
+}
+.card.small {
+  height: 100px;
+}
+@media (max-width: 770px) {
+  .card {
+    transform: scale(0.8);
+  }
+  .weather.loading::after {
+    bottom: 365px;
+    left: 10px;
+  }
+  .card.small {
+    height: 150px;
+  }
+}
+@media (max-width: 330px) {
+  .card {
+    transform: scale(0.7);
+  }
+}
